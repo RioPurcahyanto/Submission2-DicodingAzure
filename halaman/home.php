@@ -3,7 +3,7 @@
 	<p>Welcome to this site</p>
 	<p>Please upload your file in button below</p>
 	
-	<form action="/halaman/upload.php" method="post" enctype="multipart/form-data">
+	<form action="/halaman/phpQS.php" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
