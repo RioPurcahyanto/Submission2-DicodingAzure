@@ -4,7 +4,7 @@
 	<p>Please upload your file in button below</p>
 	
 	<form action="upload.php" method="post" enctype="multipart/form-data">
-    echo Select image to upload:
+    Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>
