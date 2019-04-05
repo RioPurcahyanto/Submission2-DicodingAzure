@@ -46,7 +46,12 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$fileToUpload = "HelloWorld.txt";
+//fileToUpload = "HelloWorld.txt";
+//The base 64 string
+$displayPictureBase64 = $this->ValidateParameter('DisplayPicture', $this->param, STRING);
+
+//Convert the file to stream
+$fileToUpload = fopen('data:image/jpeg;base64,' . $displayPictureBase64,'r');
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
