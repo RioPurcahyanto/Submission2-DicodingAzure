@@ -82,9 +82,9 @@ if (!isset($_GET["Cleanup"])) {
         fclose($myfile);
         
         # Upload file as a block blob
-        echo "Uploading BlockBlob: ".PHP_EOL;
-        echo $fileToUpload;
-        echo "<br />";
+//         echo "Uploading BlockBlob: ".PHP_EOL;
+//         echo $fileToUpload;
+//         echo "<br />";
         
         $content = fopen($fileToUpload, "r");
 
@@ -152,8 +152,21 @@ else
 }
 ?>
 
+<html>
+<body>
+<div class = "halaman"
+<form action="upload.php" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="fileToUpload"><br>
+<input type="submit" name="submit" value="Submit">
+</form>
+
+
 
 <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
 </form>
-
+    </div>
+</body>
+</html>
