@@ -46,8 +46,7 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-//fileToUpload = "HelloWorld.txt";
-$fileToUpload = fopen("/document/","r")
+$fileToUpload = fopen("/document/","r";
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
@@ -84,12 +83,12 @@ if (!isset($_GET["Cleanup"])) {
         fclose($myfile);
         
         # Upload file as a block blob
-       // echo "Uploading BlockBlob: ".PHP_EOL;
-        //echo $fileToUpload;
-        //echo "<br />";
+        echo "Uploading BlockBlob: ".PHP_EOL;
+        echo $fileToUpload;
+        echo "<br />";
         
         $content = fopen($fileToUpload, "r");
-        
+
         //Upload blob
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
 
@@ -158,3 +157,4 @@ else
 <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
 </form>
+
