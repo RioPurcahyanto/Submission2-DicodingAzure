@@ -178,26 +178,10 @@ else
 }
 ?>
 
-<html>
-<body>
-<div class = "halaman">
-<form action = "" method = "POST" enctype = "multipart/form-data">
-         <input type = "file" name = "image" />
-         <input type = "submit"/>
-			
-         <ul>
-            <li>Sent file: <?php echo $_FILES['image']['name'];  ?>
-            <li>File size: <?php echo $_FILES['image']['size'];  ?>
-            <li>File type: <?php echo $_FILES['image']['type'] ?>
-         </ul>
-			
-      </form>
 
 
 
 <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
 </form>
-</div>
-</body>
-</html>
+
