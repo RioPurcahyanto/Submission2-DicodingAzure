@@ -48,10 +48,10 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 
 //fileToUpload = "HelloWorld.txt";
 //The base 64 string
-$displayPictureBase64 = $this->ValidateParameter('DisplayPicture', $this->param, STRING);
+//$displayPictureBase64 = $this->ValidateParameter('DisplayPicture', $this->param, STRING);
 
 //Convert the file to stream
-$fileToUpload = fopen('data:image/jpeg;base64,' . $displayPictureBase64,'r');
+//$fileToUpload = fopen('data:image/jpeg;base64,' . $displayPictureBase64,'r');
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
@@ -88,11 +88,12 @@ if (!isset($_GET["Cleanup"])) {
         fclose($myfile);
         
         # Upload file as a block blob
-        echo "Uploading BlockBlob: ".PHP_EOL;
-        echo $fileToUpload;
-        echo "<br />";
+       // echo "Uploading BlockBlob: ".PHP_EOL;
+        //echo $fileToUpload;
+        //echo "<br />";
         
-        $content = fopen($fileToUpload, "r");
+        //$content = fopen($fileToUpload, "r");
+        $content = fopen($_FILES["resFile"]["tmp_name"], 'r');
 
         //Upload blob
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
