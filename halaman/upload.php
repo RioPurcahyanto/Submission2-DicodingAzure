@@ -42,6 +42,6 @@ if ($uploadOk == 0) {
     }
 }
  $image=$_FILES["filetoUpload"]["name"]; 
-              $img="upload/".$image;
+              $img="halaman/upload/".$image;
               echo '<img src= "halaman/uploads/".$img>';
 
