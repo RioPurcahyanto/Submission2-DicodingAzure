@@ -1,5 +1,5 @@
 <?php
-$target_dir = "/halaman/uploads/";
+$target_dir = "/halaman/uploads";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -41,6 +41,7 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+ $image=$_FILES["filetoUpload"]["name"]; 
+              $img="upload/".$image;
+              echo '<img src= "halaman/uploads/".$img>';
 
-$img="upload/".$image;
-?>
