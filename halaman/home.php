@@ -3,7 +3,7 @@
 	<p>Welcome to this site</p>
 	<p>Please upload your file in button below</p>
 	
-	<form action = "/halaman/phpQS.php" method = "POST" enctype = "multipart/form-data">
+	<form action = "/halaman/upload.php" method = "POST" enctype = "multipart/form-data">
          <input type = "file" name = "image" />
          <input type = "submit"/>
 
