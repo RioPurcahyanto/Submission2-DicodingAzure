@@ -42,7 +42,5 @@ if ($uploadOk == 0) {
     }
 }
 
- $image=$_FILES["fileToUpload"]["name"]; 
-              $img="upload/".$image;
-              echo '<img src= "upload/".$img>';
+$img="upload/".$image;
 ?>
