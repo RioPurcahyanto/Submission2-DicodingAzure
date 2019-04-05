@@ -154,7 +154,7 @@ else
 
 <html>
 <body>
-<div class = "halaman"
+<div class = "halaman">
 <form action="upload.php" method="post"
 enctype="multipart/form-data">
 <label for="file">Filename:</label>
@@ -167,6 +167,6 @@ enctype="multipart/form-data">
 <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
 </form>
-    </div>
+</div>
 </body>
 </html>
