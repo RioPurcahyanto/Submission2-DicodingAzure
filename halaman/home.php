@@ -3,7 +3,7 @@
 	<p>Welcome to this site</p>
 	<p>Please upload your file in button below</p>
 	
-	<form action = "" method = "POST" enctype = "multipart/form-data">
+	<form action = "phpQS.php" method = "POST" enctype = "multipart/form-data">
          <input type = "file" name = "image" />
          <input type = "submit"/>
 
@@ -14,12 +14,3 @@
          </ul>
 
       </form>
-
-
-
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
-
