@@ -46,8 +46,12 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
-$fileToUpload = $_FILES['image'];
-
+$fileToUpload = opendir(dirname(realpath(__FILE__)).'halaman/uploads/');
+while($file = readdir($handle)){
+  if($file !== '.' && $file !== '..'){
+    echo '<img src="pictures/'.$file.'" border="0" />';
+  }
+}
 
 
 if (!isset($_GET["Cleanup"])) {
