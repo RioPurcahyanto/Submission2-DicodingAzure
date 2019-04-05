@@ -46,7 +46,7 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$fileToUpload = fopen("/document/","r";
+$fileToUpload = fopen("/document/","r");
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
