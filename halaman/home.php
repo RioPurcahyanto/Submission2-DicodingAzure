@@ -1,9 +1,7 @@
 <div class="halaman">
 	<h2>Welcome to this site</h2>
 	<p>Please upload your file in button below</p>
-	\n
-	\n
-	\n
+	<br><br><br>
 	<form action="/halaman/upload.php" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
