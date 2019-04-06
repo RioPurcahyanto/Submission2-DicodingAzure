@@ -6,22 +6,14 @@
 </div>
 
 <?php
-function getDirContents($dir, &$results = array()){
-    $files = scandir($dir);
+$dir = "D:\home\site\wwwroot\halaman\uploads";
 
-    foreach($files as $key => $value){
-        $path = realpath($dir.DIRECTORY_SEPARATOR.$value);
-        if(!is_dir($path)) {
-            $results[] = $path;
-        } else if($value != "." && $value != "..") {
-            getDirContents($path, $results);
-            $results[] = $path;
-        }
-    }
+// Sort in ascending order - this is default
+$a = scandir($dir);
 
-    return $results;
-}
+// Sort in descending order
+$b = scandir($dir,1);
 
-var_dump(getDirContents('\halaman\uploads'));
+print_r($a);
 ?>
 
