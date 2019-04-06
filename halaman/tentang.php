@@ -12,6 +12,6 @@
 	$fileToUpload = $files[0];
 	$filePath = $files[0];
 	$fileToUpload = basename($filePath);
-	print($filePath);
-	print($fileToUpload);
+	print("this is file path".$filePath.\n);
+	print("this is fileToUpload".$fileToUpload.\n);
 ?>
