@@ -10,6 +10,7 @@
 	print_r($files);
 for ($n = 0; $n >= 0; $n++){
 	$filePath = $files[$n];
+}
 	$fileToUpload = basename($filePath);
 	print($filePath);
 	print($fileToUpload);
