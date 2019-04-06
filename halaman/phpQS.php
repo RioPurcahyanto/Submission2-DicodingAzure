@@ -99,7 +99,7 @@ if (!isset($_GET["Cleanup"])) {
         echo $fileToUpload;
         echo "<br />";
         
-        $content = fopen($fileToUpload, "r");
+        $content = fopen($filePath, "r");
 
         //Upload blob
         $blobClient->createBlockBlob($containerName, $fileToUpload, $content);
