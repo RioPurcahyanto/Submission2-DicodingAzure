@@ -1,7 +1,7 @@
 <div class="halaman">
 	<h2>Tentang Kami</h2>
-	
-	<p>This is supporting website for Dicoding - Azure - Rio's Submission2</p>
+	<p>This is supporting website for Dicoding - Azure - Rio's Submission2</p><br />
+	<p>Here is list of uploaded file</p>
 	
 </div>
 
@@ -13,5 +13,6 @@
 	$filePath = $files[0];
 	$fileToUpload = basename($filePath);
 // 	echo "this is file path".$filePath."<br />";
-	echo "this is fileToUpload".$fileToUpload ."<br />";
+	
+	echo $fileToUpload ."<br />";
 ?>
