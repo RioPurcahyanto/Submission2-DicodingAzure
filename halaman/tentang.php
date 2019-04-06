@@ -7,6 +7,10 @@
 
 <?php
  	$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
+	ksort($files);
+    // find the last modification
+    $reallyLastModified = end($files);
+
 	print_r($files);
 	$filePath = $files[0];
 	$fileToUpload = basename($filePath);
