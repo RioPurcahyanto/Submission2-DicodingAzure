@@ -54,6 +54,9 @@ $files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
 	$fileToUpload = $files[0];
 	$filePath = $files[0];
 	$fileToUpload = basename($filePath);
+	$filePrefix = basename($filepath, ".jpg");
+	$filePrefix = basename($filepath, ".png");
+	$filePrefix = basename($filepath, ".gif");
 
 
 if (!isset($_GET["Cleanup"])) {
@@ -102,7 +105,7 @@ if (!isset($_GET["Cleanup"])) {
 
         // List blobs.
         $listBlobsOptions = new ListBlobsOptions();
-        $listBlobsOptions->setPrefix("HelloWorld");
+        $listBlobsOptions->setPrefix($filePrefix);
 
         echo "These are the blobs present in the container: ";
 
