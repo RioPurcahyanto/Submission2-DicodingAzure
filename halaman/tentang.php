@@ -10,5 +10,5 @@
 	usort( $files, function( $a, $b ) { return filemtime($b) - filemtime($a); } );
 // 	print_r($files);
 	$filename = basename($files); 
-	print($filename);
+	print_r($filename);
 ?>
