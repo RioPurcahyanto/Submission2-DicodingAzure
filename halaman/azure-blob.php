@@ -32,8 +32,6 @@
 #
 **/
 
-
-
 require_once 'vendor/autoload.php';
 require_once "./halaman/random_string.php";
 
@@ -45,14 +43,11 @@ use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest;AccountKey=vWAfBomFgMUwjnZ6NbLwTUj5sYJcWuDED+o8BI3v7HBbR4HFQUYn5Cl99AI67tcvnyUJO/s8wy0Myj5Km8wqZg==";
 
-
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg"
-// $dir = "D:\home\site\wwwroot\halaman\uploads"
-// $files = scandir ($dir);
-// $fileToUpload = $dir . $dir . $files[2];
+// $fileToUpload = "HelloWorld.txt";
+$fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg";
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
@@ -84,14 +79,14 @@ if (!isset($_GET["Cleanup"])) {
         // Create container.
         $blobClient->createContainer($containerName, $createContainerOptions);
 
-//         Getting local file so that we can upload it to Azure
-        $myfile = fopen($fileToUpload, "r") or die("Unable to open file!");
+        // Getting local file so that we can upload it to Azure
+        $myfile = fopen($fileToUpload, "w") or die("Unable to open file!");
         fclose($myfile);
         
         # Upload file as a block blob
-//         echo "Uploading BlockBlob: ".PHP_EOL;
-//         echo $fileToUpload;
-//         echo "<br />";
+        echo "Uploading BlockBlob: ".PHP_EOL;
+        echo $fileToUpload;
+        echo "<br />";
         
         $content = fopen($fileToUpload, "r");
 
@@ -158,8 +153,6 @@ else
     }
 }
 ?>
-
-
 
 
 <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
