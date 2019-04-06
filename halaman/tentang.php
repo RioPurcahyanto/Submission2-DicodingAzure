@@ -6,7 +6,7 @@
 </div>
 
 <?php
-$dir = "/halaman/";
+$dir = "https://bmpnj-test.azurewebsites.net/halaman/uploads";
 
 // Sort in ascending order - this is default
 $a = scandir($dir);
