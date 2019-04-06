@@ -49,6 +49,9 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 $fileToUpload = "HelloWorld.txt";
 // $fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg";
 
+// print_r(glob("*.txt"));
+// $fileToUpload = 
+
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
     $createContainerOptions = new CreateContainerOptions();
