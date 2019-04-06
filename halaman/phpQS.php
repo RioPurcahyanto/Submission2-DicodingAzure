@@ -115,6 +115,7 @@ if (!isset($_GET["Cleanup"])) {
             foreach ($result->getBlobs() as $blob)
             {
                 echo $blob->getName().": ".$blob->getUrl()."<br />";
+		echo "<a href='".$blob->getUrl()."'>Click Here To Download</a>";
             }
         
             $listBlobsOptions->setContinuationToken($result->getContinuationToken());
