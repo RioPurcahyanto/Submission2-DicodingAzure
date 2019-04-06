@@ -126,7 +126,9 @@ if (!isset($_GET["Cleanup"])) {
         
 	$blob = $blobClient->getBlob($containerName, $fileToUpload);
 //         fpassthru($blob->getContentStream());
-	
+	$image = imagecreatefromstring(file_get_contents($blob->getUrl()));
+header('Content-Type: image/png');
+imagejpg($image);
 	
         echo "<br />";
     }
@@ -167,7 +169,7 @@ else
     }
 }
 ?>
-<img src="<?php echo $blob->getUrl(); ?>" >
+
 
 <!-- <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
