@@ -46,11 +46,14 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$fileToUpload = "HelloWorld.txt";
+// $fileToUpload = "HelloWorld.txt";
 // $fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg";
 
-// print_r(glob("*.txt"));
-// $fileToUpload = 
+$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
+print_r($files);
+$filePath = $files[0];
+$fileToUpload = basename($filePath);
+
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
@@ -98,7 +101,7 @@ if (!isset($_GET["Cleanup"])) {
 
         // List blobs.
         $listBlobsOptions = new ListBlobsOptions();
-        $listBlobsOptions->setPrefix("HelloWorld");
+        $listBlobsOptions->setPrefix("Image");
 
         echo "These are the blobs present in the container: ";
 
