@@ -167,7 +167,7 @@ else
     }
 }
 ?>
-<img src=$filePath>
+<img src=<?php echo $filePath; ?> >
 
 <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
