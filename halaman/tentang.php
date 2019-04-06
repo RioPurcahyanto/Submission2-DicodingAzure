@@ -11,3 +11,4 @@
 	$fileToUpload = $files;
 	$filePath = $files;
 	$fileToUpload = basename($filePath);
+?>
