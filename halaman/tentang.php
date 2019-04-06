@@ -6,7 +6,7 @@
 </div>
 
 <?php
-$dir = "/halaman/uploads/";
+$dir = "/halaman/";
 
 // Sort in ascending order - this is default
 $a = scandir($dir);
