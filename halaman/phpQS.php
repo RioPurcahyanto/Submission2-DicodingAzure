@@ -49,7 +49,7 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$dir = "/halaman/uploads/";
+$dir = "/halaman/uploads";
 
 // Sort in ascending order - this is default
 $a = scandir($dir);
