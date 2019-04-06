@@ -1,6 +1,5 @@
 <div class="halaman">
-	<h2>Halaman Depan</h2>
-	<p>Welcome to this site</p>
+	<h2>Welcome to this site</h2>
 	<p>Please upload your file in button below</p>
 	\n
 	\n
