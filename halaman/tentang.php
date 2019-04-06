@@ -7,6 +7,6 @@
 
 <?php
  	$files = glob("D:\home\site\wwwroot\halaman\uploads\*.{jpg,gif,png}", GLOB_BRACE);
-	print_r($files)
+	print_r($files)\n
  
 ?>
