@@ -50,7 +50,9 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
 // $fileToUpload = 
-$fileToUpload = "HelloWorld.txt";
+// $fileToUpload = "HelloWorld.txt";
+$dir = "D:\home\site\wwwroot\halaman\uploads";
+$fileToUpload = $_FILES['file']['tmp_name'];
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
