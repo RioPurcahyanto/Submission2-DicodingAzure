@@ -6,11 +6,10 @@
 </div>
 
 <?php
- 	$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
-	$n = "0";
+ 	$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}");
+	usort($files, create_function('$a,$b', 'return filemtime($a) - filemtime($b);'));
 	print_r($files);
 	$filePath = $files[$n];
-	$n = ++;
 	$fileToUpload = basename($filePath);
 	print($filePath);
 	print($fileToUpload);
