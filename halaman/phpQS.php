@@ -48,7 +48,7 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
-$path    = '/tmp';
+$path    = '/halaman/uploads';
 $fileToUpload = scandir($path);
 $files = array_diff(scandir($path), array('.', '..'));
 
