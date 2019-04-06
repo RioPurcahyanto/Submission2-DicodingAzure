@@ -8,3 +8,5 @@
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>
+
+	<p> about this feature: upload image from your local disk to my azure blob storage</p>
