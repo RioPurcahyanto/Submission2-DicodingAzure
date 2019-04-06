@@ -13,8 +13,8 @@ Site : bmpnjtest.azureweb.net
 -->
 <div class="content">
 	<header>
-		<h1 class="judul">bmpnjtest.azureweb.net</h1>
-		<h3 class="deskripsi">Web App pendukung azureweb</h3>
+		<h1 class="judul">bmpnj-test.azureweb.net</h1>
+		<h3 class="deskripsi">Web Application</h3>
 	</header>
  
 	<div class="menu">
