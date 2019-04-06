@@ -21,7 +21,8 @@ Site : bmpnjtest.azureweb.net
 		<ul>
 			<li><a href="index.php?page=home">HOME</a></li>
 			<li><a href="index.php?page=tentang">TENTANG</a></li>
-			<li><a href="index.php?page=azurestorage">AZURE</a></li>
+			<li><a href="index.php?page=azurestorage">AZURE-BLOB</a></li>
+			<li><a href="index.php?page=azurevision">AZURE-VISION</a></li>
 			
 		</ul>
 	</div>
@@ -42,6 +43,9 @@ Site : bmpnjtest.azureweb.net
 				break;
 			case 'azurestorage':
 				include "halaman/phpQS.php";
+				break;
+			case 'azurevision':
+				include "halaman/computer_vision.html";
 				break;
 			default:
 				echo "<center><h3>Maaf. Halaman tidak di temukan !</h3></center>";
