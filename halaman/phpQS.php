@@ -124,11 +124,12 @@ if (!isset($_GET["Cleanup"])) {
         echo "<br />";
 
         // Get blob.
-        echo "This is the content of the blob uploaded: <br />";
+        echo "if there are characters that you cannot read, that means this file is not a text file <br />"
+	echo "This is the content of the blob uploaded: <br /><br />";
         $blob = $blobClient->getBlob($containerName, $fileToUpload);
 	$imgUrl = $blob->getUrl();
-//         fpassthru($blob->getContentStream());
-	fpassthru(echo "<img src='$imgUrl'>");
+        fpassthru($blob->getContentStream());
+// 	fpassthru(echo "<img src='$imgUrl'>");
         echo "<br />";
     }
     catch(ServiceException $e){
