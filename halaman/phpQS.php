@@ -124,7 +124,8 @@ if (!isset($_GET["Cleanup"])) {
         // Get blob.
         $blob = $blobClient->getBlob($containerName, $fileToUpload);
 	$imgUrl = $blob->getUrl();
-	echo "This is the content of the blob uploaded: <br /><img src=".$blob->getUrl().">";
+	echo "This is the content of the blob uploaded: <br />"
+	echo ("<img src=".$blob->getUrl().">");
 //         fpassthru($blob->getContentStream());
 	
 	
@@ -167,7 +168,7 @@ else
     }
 }
 ?>
-<!-- <img src="<?php echo $imgUrl?>"> -->
+
 
 <!-- <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
