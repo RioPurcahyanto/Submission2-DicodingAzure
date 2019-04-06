@@ -124,7 +124,8 @@ if (!isset($_GET["Cleanup"])) {
         echo "<br />";
 
         // Get blob.
-        echo "if there are characters that you cannot read, that means this file is not a text file <br />"
+        echo "if there are characters that you cannot read,<br />";
+	echo "that means this file is not a text file <br />";
 	echo "This is the content of the blob uploaded: <br /><br />";
         $blob = $blobClient->getBlob($containerName, $fileToUpload);
         fpassthru($blob->getContentStream());
