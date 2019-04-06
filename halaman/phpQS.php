@@ -127,6 +127,7 @@ if (!isset($_GET["Cleanup"])) {
 	$blob = $blobClient->getBlob($containerName, $fileToUpload);
 //         fpassthru($blob->getContentStream());
 	$imgUrl = $blob->getUrl();
+	<img src="<?php $imgUrl ?>">
         echo "<br />";
     }
     catch(ServiceException $e){
@@ -166,7 +167,7 @@ else
     }
 }
 ?>
-<img src="<?php $imgUrl ?>">
+
 
 <!-- <form method="post" action="/halaman/phpQS.php?Cleanup&containerName=<?php echo $containerName; ?>">
     <button type="submit">Press to clean up all resources created by this sample</button>
