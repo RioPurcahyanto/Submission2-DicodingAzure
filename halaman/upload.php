@@ -20,11 +20,12 @@
       if(empty($errors)==true){
 //          move_uploaded_file($file_tmp,"images/".$file_name);
          echo "Success";
+         header("Location: https://bmpnj-test.azurewebsites.net/index.php"); /* Redirect browser */
       }else{
          print_r($errors);
       }
    }
-?>
+
 
 
 
@@ -72,3 +73,4 @@
 //         echo "Sorry, there was an error uploading your file.";
 //     }
 // }
+?>
