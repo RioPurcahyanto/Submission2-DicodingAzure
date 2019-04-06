@@ -8,6 +8,7 @@
 <?php
  	$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
 	usort( $files, function( $a, $b ) { return filemtime($b) - filemtime($a); } );
-	print_r($files);
-	
+// 	print_r($files);
+	$filename = basename($files); 
+	print($filename);
 ?>
