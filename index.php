@@ -42,7 +42,7 @@ Site : bmpnjtest.azureweb.net
 				include "halaman/tentang.php";
 				break;
 			case 'azurestorage':
-				include "halaman/phpQS.php";
+				include "halaman/azure-blob.php";
 				break;
 			case 'azurevision':
 				include "halaman/computer_vision.html";
