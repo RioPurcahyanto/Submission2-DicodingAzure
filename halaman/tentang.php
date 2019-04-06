@@ -22,6 +22,6 @@ function getDirContents($dir, &$results = array()){
     return $results;
 }
 
-var_dump(getDirContents('D:\home\site\wwwroot\halaman'));
+var_dump(getDirContents('\halaman\uploads'));
 ?>
 
