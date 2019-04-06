@@ -11,7 +11,7 @@
 	<p> about this feature: upload image from your local disk to my azure blob storage</p>
 	<br /><br /><br /><br /><br />
 	<p>NOTES:</p>
-	<p>1. Upload foto melalui form diatas</p>
+	<p>1. Upload foto melalui form diatas, aplikasi akan otomatis mengupload ke azure blob storage</p>
 	<p>2. Jika belum upload foto, menu AZURE-BLOB bisa terbuka tetapi muncul pesan 'Unable to open file!'</p>
 	<p>3. Jika anda memasukan file selain format image, maka akan muncul pesan 'File is not an image.Sorry, only JPG, JPEG, PNG & GIF files are allowed.Sorry, your file was not uploaded.'</p>
 	<p>4. Anda bisa melihat nama file foto yang telah diupload pada menu TENTANG</p>
