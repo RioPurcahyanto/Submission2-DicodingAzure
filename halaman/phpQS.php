@@ -49,17 +49,7 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$dir = "/halaman/uploads/";
-
-// Open a known directory, and proceed to read its contents
-if (is_dir($dir)) {
-    if ($dh = opendir($dir)) {
-        while (($file = readdir($dh)) !== false) {
-            echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
-        }
-        closedir($dh);
-    }
-}
+$fileToUpload = fopen("halaman/uploads/","r")
 
 
 if (!isset($_GET["Cleanup"])) {
@@ -92,9 +82,9 @@ if (!isset($_GET["Cleanup"])) {
         // Create container.
         $blobClient->createContainer($containerName, $createContainerOptions);
 
-        // Getting local file so that we can upload it to Azure
-//         $myfile = fopen($fileToUpload, "w") or die("Unable to open file!");
-//         fclose($myfile);
+//         Getting local file so that we can upload it to Azure
+        $myfile = fopen($fileToUpload, "w") or die("Unable to open file!");
+        fclose($myfile);
         
         # Upload file as a block blob
 //         echo "Uploading BlockBlob: ".PHP_EOL;
