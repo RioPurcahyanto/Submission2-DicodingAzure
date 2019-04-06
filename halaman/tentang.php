@@ -7,8 +7,8 @@
 
 <?php
  	$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}");
-	usort($files, create_function('$a,$b', 'return filemtime($a) - filemtime($b);'));
 	print_r($files);
+for ($n = 0; $n >= 0; $n++){
 	$filePath = $files[$n];
 	$fileToUpload = basename($filePath);
 	print($filePath);
