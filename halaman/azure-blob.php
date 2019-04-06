@@ -49,10 +49,10 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-// $fileToUpload = 
-$dir = "D:\home\site\wwwroot\halaman\uploads"
-$files = scandir ($dir);
-$fileToUpload = $dir . $dir . $files[2];
+$fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg"
+// $dir = "D:\home\site\wwwroot\halaman\uploads"
+// $files = scandir ($dir);
+// $fileToUpload = $dir . $dir . $files[2];
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
