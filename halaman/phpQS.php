@@ -124,7 +124,8 @@ if (!isset($_GET["Cleanup"])) {
         // Get blob.
         echo "This is the content of the blob uploaded: ";
         $blob = $blobClient->getBlob($containerName, $fileToUpload);
-        fpassthru($blob->getContentStream());
+//         fpassthru($blob->getContentStream());
+	fpassthru(echo "<img src=".$blob->getUrl().">");
         echo "<br />";
     }
     catch(ServiceException $e){
