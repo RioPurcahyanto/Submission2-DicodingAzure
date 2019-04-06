@@ -13,6 +13,8 @@
 	$filePath = $files[0];
 	$fileToUpload = basename($filePath);
 // 	echo "this is file path".$filePath."<br />";
-	
-	echo $fileToUpload ."<br />";
+	$filetoshow = $files;
+	$filePath2 = $files;
+	$filetoshow = basename($filePath2);
+	echo $fileToShow ."<br />";
 ?>
