@@ -51,7 +51,8 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 
 // $fileToUpload = 
 $dir = "D:\home\site\wwwroot\halaman\uploads"
-$fileToUpload = glob("D:\home\site\wwwroot\halaman\uploads\*.jpg"
+$files = scandir ($dir);
+$fileToUpload = $directory . $files[2]
 
 if (!isset($_GET["Cleanup"])) {
     // Create container options object.
