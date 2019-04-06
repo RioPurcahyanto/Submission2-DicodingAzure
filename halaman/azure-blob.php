@@ -50,7 +50,6 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 // $fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg";
 
 $files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
-print_r($files);
 $filePath = $files[0];
 $fileToUpload = basename($filePath);
 
