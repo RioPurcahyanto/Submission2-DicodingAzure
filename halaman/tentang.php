@@ -16,5 +16,5 @@
 	$filetoshow = $files;
 	$filePath2 = $files;
 	$filetoshow = basename($filePath2);
-	echo $fileToShow ."<br />";
+	echo $filetoshow ."<br />";
 ?>
