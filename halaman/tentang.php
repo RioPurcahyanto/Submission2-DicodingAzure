@@ -6,6 +6,7 @@
 </div>
 
 <?php
-	$files = glob("D:\home\site\wwwroot\halaman\uploads\*.{jpg,gif,png}", GLOB_BRACE);
-	print_r($files)
+	foreach(glob("D:\home\site\wwwroot\halaman\uploads\*.{jpg,gif,png}") as $file){ 
+ echo "$file\n"; 
+} 
 ?>
