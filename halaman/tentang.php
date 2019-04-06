@@ -6,9 +6,9 @@
 </div>
 
 <?php
- 	$files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
+ 	$files = glob("halaman\*.{jpg,gif,png}", GLOB_BRACE);
 	usort( $files, function( $a, $b ) { return filemtime($b) - filemtime($a); } );
-// 	print_r($files);
-	$filename = basename($files); 
-	print_r($filename);
+	print_r($files);
+// 	$filename = basename($files[0]); 
+// 	print_r($filename);
 ?>
