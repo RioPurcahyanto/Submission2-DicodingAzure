@@ -55,6 +55,7 @@ $files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
 	$filePath = $files[0];
 	$fileToUpload = basename($filePath);
 	$filePrefix = basename($filepath, ".jpg");
+	$filePrefix = basename($filepath, ".jpeg");
 	$filePrefix = basename($filepath, ".png");
 	$filePrefix = basename($filepath, ".gif");
 
