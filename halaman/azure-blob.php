@@ -50,8 +50,13 @@ $blobClient = BlobRestProxy::createBlobService($connectionString);
 // $fileToUpload = "D:\home\site\wwwroot\halaman\uploads\Jellyfish.jpg";
 
 $files = glob("D:\home\site\wwwroot\halaman\*.{jpg,gif,png}", GLOB_BRACE);
-$filePath = $files[0];
-$fileToUpload = basename($filePath);
+	usort( $files, function( $a, $b ) { return filemtime($b) - filemtime($a); } );
+	print_r($files);
+	$fileToUpload = $files[0];
+	$filePath = $files[0];
+	$fileToUpload = basename($filePath);
+	print($filePath);
+	print($fileToUpload);
 
 
 if (!isset($_GET["Cleanup"])) {
