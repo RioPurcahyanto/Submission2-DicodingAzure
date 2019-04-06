@@ -10,7 +10,7 @@
 	print_r($files);
 	$n = 0;
 	$filePath = $files[$n];
-	$n = $n++
+	$n = $n++;
 	$fileToUpload = basename($filePath);
 	print($filePath);
 	print($fileToUpload);
