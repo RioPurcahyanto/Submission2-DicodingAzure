@@ -49,13 +49,10 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 
-$dir = "/halaman/uploads";
-
-// Sort in ascending order - this is default
-$a = scandir($dir);
-
-print_r($a);
-//$fileToUpload = $_FILES["fileToUpload"]["tmp_name"];
+$fileList = glob('halaman/uploads*');
+foreach($fileList as $filename){
+   //Simply print them out onto the screen.
+   echo $filename, '<br>'; 
 
 
 if (!isset($_GET["Cleanup"])) {
