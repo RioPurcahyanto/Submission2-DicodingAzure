@@ -48,8 +48,11 @@ $connectionString = "DefaultEndpointsProtocol=https;AccountName=bmpnjstoragetest
 
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
+$path    = '/tmp';
+$fileToUpload = scandir($path);
+$files = array_diff(scandir($path), array('.', '..'));
 
-$fileToUpload = $_FILES["fileToUpload"]["tmp_name"];
+//$fileToUpload = $_FILES["fileToUpload"]["tmp_name"];
 
 
 if (!isset($_GET["Cleanup"])) {
