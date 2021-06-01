@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="jquery.js"></script>
 </head>
 <body>
+<script data-ad-client="ca-pub-3259637298098700" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 
 Author : riopurcahyanto 
 Site : bmpnjtest.azureweb.net
